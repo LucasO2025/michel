@@ -1,0 +1,618 @@
+CLASSE PRINCIPAL:
+
+package michel;
+
+import javax.swing.JOptionPane;
+
+public class Michel {
+
+    public static void main(String[] args) {
+            int operacao = 0;
+            operacao = Integer.parseInt(JOptionPane.showInputDialog("Informe um número para cadastrar: \n 1 - Servidor \n 2 - Notebook \n 3 - Desktop")); // Dessa forma
+            executa somente o que o usuário deseja cadastrar, e não a classe inteira
+            
+        switch(operacao){
+               case 1: // caso 1, executa somente o servidor
+            // SERVIDOR
+            Servidor S1 = new Servidor();
+            S1.setMarca(JOptionPane.showInputDialog("Informe a marca: "));
+            S1.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Informe o preço: ")));
+            S1.setQuant(Integer.parseInt(JOptionPane.showInputDialog("Informe a quantidade: ")));
+            S1.setNumHd(Integer.parseInt(JOptionPane.showInputDialog("Informe o número do HD: ")));
+            S1.setSlotMem(Integer.parseInt(JOptionPane.showInputDialog("Informe o slot de memória: ")));
+            S1.setTipoMem(JOptionPane.showInputDialog("Informe o tipo da memória: "));
+            S1.setMarcaMem(JOptionPane.showInputDialog("Informe a marca da memória: "));
+            S1.setCapacidMem(Integer.parseInt(JOptionPane.showInputDialog("Informe a capacidade da memória: ")));
+            S1.setTipoHd(JOptionPane.showInputDialog("Informe o tipo do HD: "));
+            S1.setMarcaHd(JOptionPane.showInputDialog("Informe a marca do HD: "));
+            S1.setCapacidHd(Integer.parseInt(JOptionPane.showInputDialog("Informe a capacidade do HD: ")));
+            S1.setTipoGab(JOptionPane.showInputDialog("Informe o tipo do gabinete: "));
+            S1.setMarcaGab(JOptionPane.showInputDialog("Informe a marca do gabinete: "));
+            S1.setTipoFonte(JOptionPane.showInputDialog("Informe o tipo da fonte: "));
+            S1.setMarcaFonte(JOptionPane.showInputDialog("Informe a marca da fonte: "));
+            S1.setPotenciaFonte(Integer.parseInt(JOptionPane.showInputDialog("Informe a potência da fonte: ")));
+            System.out.println("Marca: " + S1.getMarca());
+            System.out.println("Preço: " + S1.getPreco());
+            System.out.println("Quantidade: " + S1.getQuant());
+            System.out.println("Número do HD: " + S1.getNumHd());
+            System.out.println("Slots de memória: " + S1.getSlotMem());
+            System.out.println("Tipo da memória: " + S1.getTipoMem());
+            System.out.println("Marca da memória: " + S1.getMarcaMem());
+            System.out.println("Capacidade da memória: " + S1.getCapacidMem());
+            System.out.println("Tipo do HD: " + S1.getTipoHd());
+            System.out.println("Marca do HD: " + S1.getMarcaHd());
+            System.out.println("Capacidade do HD: " + S1.getCapacidHd());
+            System.out.println("Tipo do gabinete: " + S1.getTipoGab());
+            System.out.println("Marca do gabinete: " + S1.getMarcaGab());
+            System.out.println("Tipo da fonte: " + S1.getTipoFonte());
+            System.out.println("Marca da fonte: " + S1.getMarcaFonte());
+            System.out.println("Potência da fonte: " + S1.getPotenciaFonte());
+            break;
+
+                case 2: // caso 2, executa somente o notebook
+            //NOTEBOOK
+            Notebook N1 = new Notebook();
+            N1.setMarca(JOptionPane.showInputDialog("Informe a marca: "));
+            N1.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Informe o preço: ")));
+            N1.setQuant(Integer.parseInt(JOptionPane.showInputDialog("Informe a quantidade: ")));
+            N1.setSlotMem(Integer.parseInt(JOptionPane.showInputDialog("Informe o slot de memória: ")));
+            N1.setTipoMem(JOptionPane.showInputDialog("Informe o tipo da memória: "));
+            N1.setMarcaMem(JOptionPane.showInputDialog("Informe a marca da memória: "));
+            N1.setNumSlotMem(Integer.parseInt(JOptionPane.showInputDialog("Informe o número de slots da memória: ")));
+            N1.setTipoHd(JOptionPane.showInputDialog("Informe o tipo do HD: "));
+            N1.setMarcaHd(JOptionPane.showInputDialog("Informe a marca do HD: "));
+            N1.setCapacidHd(Integer.parseInt(JOptionPane.showInputDialog("Informe a capacidade do HD: ")));
+            N1.setTipoMonitor(JOptionPane.showInputDialog("Informe o tipo do monitor: "));
+            N1.setMarcaMonitor(JOptionPane.showInputDialog("Informe a marca do monitor: "));
+            N1.setResMonitor(Integer.parseInt(JOptionPane.showInputDialog("Informe a resolução do monitor: ")));
+            N1.setTipoFonte(JOptionPane.showInputDialog("Informe o tipo da fonte: "));
+            N1.setMarcaFonte(JOptionPane.showInputDialog("Informe a marca da fonte: "));
+            N1.setPotencFonte(Integer.parseInt(JOptionPane.showInputDialog("Informe a potência da fonte: ")));
+            System.out.println("Marca: " + N1.getMarca());
+            System.out.println("Preço: " + N1.getPreco());
+            System.out.println("Quantidade: " + N1.getQuant());
+            System.out.println("Slots de memória: " + N1.getSlotMem());
+            System.out.println("Tipo da memória: " + N1.getTipoMem());
+            System.out.println("Marca da memória: " + N1.getMarcaMem());
+            System.out.println("Número de slots da memória: " + N1.getNumSlotMem());
+            System.out.println("Tipo do HD: " + N1.getTipoHd());
+            System.out.println("Marca do HD: " + N1.getMarcaHd());
+            System.out.println("Capacidade do HD: " + N1.getCapacidHd());
+            System.out.println("Tipo do monitor: " + N1.getTipoMonitor());
+            System.out.println("Marca do monitor: " + N1.getMarcaMonitor());
+            System.out.println("Resolução do monitor: " + N1.getResMonitor());
+            System.out.println("Tipo da fonte: " + N1.getTipoFonte());
+            System.out.println("Marca da fonte: " + N1.getMarcaFonte());
+            System.out.println("Potência da fonte: " + N1.getPotencFonte());
+            break;
+
+                case 3: // caso 3, executa somente o desktop
+            // DESKTOP
+            Desktop D1 = new Desktop();
+            D1.setMarca(JOptionPane.showInputDialog("Informe a marca: "));
+            D1.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Informe o preço: ")));
+            D1.setQuant(Integer.parseInt(JOptionPane.showInputDialog("Informe a quantidade: ")));
+            D1.setPlacasVid(Integer.parseInt(JOptionPane.showInputDialog("Informe a quantidade de placas de vídeo: ")));
+            D1.setTipoMem(JOptionPane.showInputDialog("Informe o tipo da memória: "));
+            D1.setMarcaMem(JOptionPane.showInputDialog("Informe a marca da memória: "));
+            D1.setNumSlotMem(Integer.parseInt(JOptionPane.showInputDialog("Informe o número de slots da memória: ")));
+            D1.setTipoHd(JOptionPane.showInputDialog("Informe o tipo do HD: "));
+            D1.setMarcaHd(JOptionPane.showInputDialog("Informe a marca do HD: "));
+            D1.setCapacidadeHd(Integer.parseInt(JOptionPane.showInputDialog("Informe a capacidade do HD: ")));
+            D1.setTipoMonitor(JOptionPane.showInputDialog("Informe o tipo do monitor: "));
+            D1.setMarcaMonitor(JOptionPane.showInputDialog("Informe a marca do monitor: "));
+            D1.setResMonitor(Integer.parseInt(JOptionPane.showInputDialog("Informe a resolução do monitor: ")));
+            D1.setTipoFonte(JOptionPane.showInputDialog("Informe o tipo da fonte: "));
+            D1.setMarcaFonte(JOptionPane.showInputDialog("Informe a marca da fonte: "));
+            D1.setPotencFonte(Integer.parseInt(JOptionPane.showInputDialog("Informe a potência da fonte: ")));
+            D1.setMarcaPlacaVid(JOptionPane.showInputDialog("Informe a marca da(s) placa(s) de vídeo: "));
+            System.out.println("Marca: " + D1.getMarca());
+            System.out.println("Preço: " + D1.getPreco());
+            System.out.println("Quantidade: " + D1.getQuant());
+            System.out.println("Quantidade de placas de vídeo: " + D1.getPlacasVid());
+            System.out.println("Tipo da memória: " + D1.getTipoMem());
+            System.out.println("Marca da memória: " + D1.getMarcaMem());
+            System.out.println("Número de slots da memória: " + D1.getNumSlotMem());
+            System.out.println("Tipo do HD: " + D1.getTipoHd());
+            System.out.println("Marca do HD: " + D1.getMarcaHd());
+            System.out.println("Capacidade do HD: " + D1.getCapacidadeHd());
+            System.out.println("Tipo do monitor: " + D1.getTipoMonitor());
+            System.out.println("Marca do monitor: " + D1.getMarcaMonitor());
+            System.out.println("Resolução do monitor: " + D1.getResMonitor());
+            System.out.println("Tipo da fonte: " + D1.getTipoFonte());
+            System.out.println("Marca da fonte: " + D1.getMarcaFonte());
+            System.out.println("Potência da fonte: " + D1.getPotencFonte());
+            System.out.println("Marca da(s) placa(s) de vídeo: " + D1.getMarcaPlacaVid());
+            break;
+        }   
+    }
+    }
+    
+    
+    
+ CLASSE SERVIDOR:
+ package michel;
+
+public class Servidor {
+    // Atributos
+    private String marca;
+    private double preco;
+    private int quant;
+    private int numHd;
+    private int slotMem;
+    private String tipoMem;
+    private String marcaMem;
+    private int capacidMem;
+    private String tipoHd;
+    private String marcaHd;
+    private int capacidHd;
+    private String tipoGab;
+    private String marcaGab;
+    private String tipoFonte;
+    private String marcaFonte;
+    private int potenciaFonte;
+    
+    // Construtores
+    Servidor(){}
+    public Servidor(String marca, double preco, int quant){
+        this.marca = marca;
+        this.preco = preco;
+        this.quant = quant;
+    }
+    public Servidor(int numHd, String tipoHd, String marcaHd, int capaciHd){
+        this.numHd = numHd;
+        this.tipoHd = tipoHd;
+        this.marcaHd = marcaHd;
+        this.capacidHd = capaciHd;
+    }
+    public Servidor(int slotMem, String tipoMem, String marcaMem){
+        this.slotMem = slotMem;
+        this.tipoMem = tipoMem;
+        this.marcaMem = marcaMem;
+    }
+    public Servidor(String tipoGab, String marcaGab){
+        this.tipoGab = tipoGab;
+        this.marcaGab = marcaGab;
+    }
+    public Servidor (String tipoFonte, String marcaFonte, int potenciaFonte){
+        this.tipoFonte = tipoFonte;
+        this.marcaFonte = marcaFonte;
+        this.potenciaFonte = potenciaFonte;
+    }
+    
+    // Getters e Setters
+    public void setMarca(String marca){
+        this.marca = marca;
+    }
+    public void setPreco(double preco){
+        this.preco = preco;
+    }
+    public void setQuant(int quant){
+        this.quant = quant;
+    }
+    public void setNumHd(int numHd){
+        this.numHd = numHd;
+    }
+    public void setSlotMem(int slotMem){
+        this.slotMem = slotMem;
+    }
+    public void setTipoMem(String tipoMem){
+        this.tipoMem = tipoMem;
+    }
+    public void setMarcaMem(String marcaMem){
+        this.marcaMem = marcaMem;
+    }
+    public void setCapacidMem(int capacidMem){
+        this.capacidMem = capacidMem;
+    }
+    public void setTipoHd(String tipoHd){
+        this.tipoHd = tipoHd;
+    }
+    public void setMarcaHd(String marcaHd){
+        this.marcaHd = marcaHd;
+    }
+    public void setCapacidHd(int capacidHd){
+        this.capacidHd = capacidHd;
+    }
+    public void setTipoGab(String tipoGab){
+        this.tipoGab = tipoGab;
+    }
+    public void setMarcaGab(String marcaGab){
+        this.marcaGab = marcaGab;
+    }
+    public void setTipoFonte(String tipoFonte){
+        this.tipoFonte = tipoFonte;
+    }
+    public void setMarcaFonte(String marcaFonte){
+        this.marcaFonte = marcaFonte;
+    }
+    public void setPotenciaFonte(int potenciaFonte){
+        this.potenciaFonte = potenciaFonte;
+    }
+    
+    public String getMarca(){
+        return marca;
+    }
+    public double getPreco(){
+        return preco;
+    }
+    public int getQuant(){
+        return quant;
+    }
+    public int getNumHd(){
+        return numHd;
+    }
+    public int getSlotMem(){
+        return slotMem;
+    }
+    public String getTipoMem(){
+        return tipoMem;
+    }
+    public String getMarcaMem(){
+        return marcaMem;
+    }
+    public int getCapacidMem(){
+        return capacidMem;
+    }
+    public String getTipoHd(){
+        return tipoHd;
+    }
+    public String getMarcaHd(){
+        return marcaHd;
+    }
+    public int getCapacidHd(){
+        return capacidHd;
+    }
+    public String getTipoGab(){
+        return tipoGab;
+    }
+    public String getMarcaGab(){
+        return marcaGab;
+    }
+    public String getTipoFonte(){
+        return tipoFonte;
+    }
+    public String getMarcaFonte(){
+        return marcaFonte;
+    }
+    public int getPotenciaFonte(){
+        return potenciaFonte;
+    }
+}
+
+
+
+CLASSE NOTEBOOK: 
+package michel;
+
+public class Notebook {
+    // Atributos
+    private String marca;
+    private double preco;
+    private int quant;
+    private int slotMem;
+    private String tipoMem;
+    private String marcaMem;
+    private int numSlotMem;
+    private String tipoHd;
+    private String marcaHd;
+    private int capacidHd;
+    private String tipoMonitor;
+    private String marcaMonitor;
+    private int resMonitor;
+    private String tipoFonte;
+    private String marcaFonte;
+    private int potencFonte;
+    
+    // Construtores
+    Notebook(){}
+    public Notebook(String marca, double preco, int quant){
+        this.marca = marca;
+        this.preco = preco;
+        this.quant = quant;
+    }
+    public Notebook(int slotMem, String tipoMem, String marcaMem, int numSlotMem){
+        this.slotMem = slotMem;
+        this.tipoMem = tipoMem;
+        this.marcaMem = marcaMem;
+        this.numSlotMem = numSlotMem;
+    }
+    public Notebook(String tipoHd, String marcaHd, int capacidHd){
+        this.tipoHd = tipoHd;
+        this.marcaHd = marcaHd;
+        this.capacidHd = capacidHd;
+    }
+    public Notebook(String tipoMonitor, int resMonitor, String marcaMonitor){
+        this.tipoMonitor = tipoMonitor;
+        this.resMonitor = resMonitor;
+        this.marcaMonitor = marcaMonitor;
+    }
+    public Notebook(int potencFonte, String tipoFonte, String marcaFonte){
+        this.potencFonte = potencFonte;
+        this.tipoFonte = tipoFonte;
+        this.marcaFonte = marcaFonte;
+    }
+    
+    // Getters e Setters
+    public String getMarca() {
+        return marca;
+    }
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public int getQuant() {
+        return quant;
+    }
+    public void setQuant(int quant) {
+        this.quant = quant;
+    }
+
+    public int getSlotMem() {
+        return slotMem;
+    }
+    public void setSlotMem(int slotMem) {
+        this.slotMem = slotMem;
+    }
+
+    public String getTipoMem() {
+        return tipoMem;
+    }
+    public void setTipoMem(String tipoMem) {
+        this.tipoMem = tipoMem;
+    }
+
+    public String getMarcaMem() {
+        return marcaMem;
+    }
+    public void setMarcaMem(String marcaMem) {
+        this.marcaMem = marcaMem;
+    }
+
+    public int getNumSlotMem() {
+        return numSlotMem;
+    }
+    public void setNumSlotMem(int numSlotMem) {
+        this.numSlotMem = numSlotMem;
+    }
+
+    public String getTipoHd() {
+        return tipoHd;
+    }
+    public void setTipoHd(String tipoHd) {
+        this.tipoHd = tipoHd;
+    }
+
+    public String getMarcaHd() {
+        return marcaHd;
+    }
+    public void setMarcaHd(String marcaHd) {
+        this.marcaHd = marcaHd;
+    }
+
+    public int getCapacidHd() {
+        return capacidHd;
+    }
+    public void setCapacidHd(int capacidHd) {
+        this.capacidHd = capacidHd;
+    }
+
+    public String getTipoMonitor() {
+        return tipoMonitor;
+    }
+    public void setTipoMonitor(String tipoMonitor) {
+        this.tipoMonitor = tipoMonitor;
+    }
+
+    public String getMarcaMonitor() {
+        return marcaMonitor;
+    }
+    public void setMarcaMonitor(String marcaMonitor) {
+        this.marcaMonitor = marcaMonitor;
+    }
+
+    public int getResMonitor() {
+        return resMonitor;
+    }
+    public void setResMonitor(int resMonitor) {
+        this.resMonitor = resMonitor;
+    }
+
+    public String getTipoFonte() {
+        return tipoFonte;
+    }
+    public void setTipoFonte(String tipoFonte) {
+        this.tipoFonte = tipoFonte;
+    }
+
+    public String getMarcaFonte() {
+        return marcaFonte;
+    }
+    public void setMarcaFonte(String marcaFonte) {
+        this.marcaFonte = marcaFonte;
+    }
+
+    public int getPotencFonte() {
+        return potencFonte;
+    }
+    public void setPotencFonte(int potencFonte) {
+        this.potencFonte = potencFonte;
+    }
+}
+
+
+
+CLASSE DESKTOP:
+package michel;
+
+public class Desktop {
+    // Atributos
+    private String marca;
+    private double preco;
+    private int quant;
+    private int placasVid;
+    private String tipoMem;
+    private String marcaMem;
+    private int numSlotMem;
+    private String tipoHd;
+    private String marcaHd;
+    private int capacidadeHd;
+    private String tipoMonitor;
+    private String marcaMonitor;
+    private int resMonitor;
+    private String tipoFonte;
+    private String marcaFonte;
+    private int potencFonte;
+    private String marcaPlacaVid;
+    
+    Desktop(){}
+    public Desktop(String marca, double preco, int quant, int placasVid, String marcaPlacaVid){
+        this.marca = marca;
+        this.preco = preco;
+        this.quant = quant;
+        this.placasVid = placasVid;
+        this.marcaPlacaVid = marcaPlacaVid;
+    }
+    public Desktop(String tipoMem, String marcaMem, int numSlotMem){
+        this.tipoMem = tipoMem;
+        this.marcaMem = marcaMem;
+        this.numSlotMem = numSlotMem;
+    }
+    public Desktop(String tipoHd, int capacidadeHd, String marcaHd){
+        this.tipoHd = tipoHd;
+        this.capacidadeHd = capacidadeHd;
+        this.marcaHd = marcaHd;
+    }
+    public Desktop(int resMonitor, String marcaMonitor, String tipoMonitor){
+        this.resMonitor = resMonitor;
+        this.marcaMonitor = marcaMonitor;
+        this.tipoMonitor = tipoMonitor;
+    }
+    
+    // Getters e Setters
+    public String getMarca() {
+        return marca;
+    }
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public int getQuant() {
+        return quant;
+    }
+    public void setQuant(int quant) {
+        this.quant = quant;
+    }
+
+    public int getPlacasVid() {
+        return placasVid;
+    }
+    public void setPlacasVid(int placasVid) {
+        this.placasVid = placasVid;
+    }
+
+    public String getTipoMem() {
+        return tipoMem;
+    }
+    public void setTipoMem(String tipoMem) {
+        this.tipoMem = tipoMem;
+    }
+
+    public String getMarcaMem() {
+        return marcaMem;
+    }
+    public void setMarcaMem(String marcaMem) {
+        this.marcaMem = marcaMem;
+    }
+
+    public int getNumSlotMem() {
+        return numSlotMem;
+    }
+    public void setNumSlotMem(int numSlotMem) {
+        this.numSlotMem = numSlotMem;
+    }
+
+    public String getTipoHd() {
+        return tipoHd;
+    }
+    public void setTipoHd(String tipoHd) {
+        this.tipoHd = tipoHd;
+    }
+
+    public String getMarcaHd() {
+        return marcaHd;
+    }
+    public void setMarcaHd(String marcaHd) {
+        this.marcaHd = marcaHd;
+    }
+
+    public int getCapacidadeHd() {
+        return capacidadeHd;
+    }
+    public void setCapacidadeHd(int capacidadeHd) {
+        this.capacidadeHd = capacidadeHd;
+    }
+
+    public String getTipoMonitor() {
+        return tipoMonitor;
+    }
+    public void setTipoMonitor(String tipoMonitor) {
+        this.tipoMonitor = tipoMonitor;
+    }
+
+    public String getMarcaMonitor() {
+        return marcaMonitor;
+    }
+    public void setMarcaMonitor(String marcaMonitor) {
+        this.marcaMonitor = marcaMonitor;
+    }
+
+    public int getResMonitor() {
+        return resMonitor;
+    }
+    public void setResMonitor(int resMonitor) {
+        this.resMonitor = resMonitor;
+    }
+
+    public String getTipoFonte() {
+        return tipoFonte;
+    }
+    public void setTipoFonte(String tipoFonte) {
+        this.tipoFonte = tipoFonte;
+    }
+
+    public String getMarcaFonte() {
+        return marcaFonte;
+    }
+    public void setMarcaFonte(String marcaFonte) {
+        this.marcaFonte = marcaFonte;
+    }
+
+    public int getPotencFonte() {
+        return potencFonte;
+    }
+    public void setPotencFonte(int potencFonte) {
+        this.potencFonte = potencFonte;
+    }
+
+    public String getMarcaPlacaVid() {
+        return marcaPlacaVid;
+    }
+    public void setMarcaPlacaVid(String marcaPlacaVid) {
+        this.marcaPlacaVid = marcaPlacaVid;
+    } 
+}
